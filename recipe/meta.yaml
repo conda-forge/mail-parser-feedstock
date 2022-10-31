@@ -11,7 +11,7 @@ source:
   sha256: d66638acf0633dfd8a718e1e3646a6d58f8e9d75080c94638c7b267b4b0d6c86
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - mailparser = mailparser.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
