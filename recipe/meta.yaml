@@ -1,5 +1,5 @@
 {% set name = "mail-parser" %}
-{% set version = "4.1.4" %}
+{% set version = "4.2.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b65abad3beee3ffb75c7851bc373412c69e1a22561d49dd7142ee7fb4321ed82
+  sha256: cae3324fb1a8d42fe37fb922ddadc63bc7b84e569724ee9567143c7ac8397dce
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - mailparser = mailparser.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
