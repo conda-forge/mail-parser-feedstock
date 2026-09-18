@@ -5,7 +5,7 @@
 
 [workspace]
 name = "mail-parser-feedstock"
-version = "2026.9.1"  # conda-smithy version used to generate this file
+version = "2026.9.10"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/mail-parser-feedstock"
 authors = ["@conda-forge/mail-parser"]
 channels = ["conda-forge"]
