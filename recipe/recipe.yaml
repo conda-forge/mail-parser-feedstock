@@ -13,8 +13,9 @@ source:
   sha256: 602e659b159652d378b0f9cce2d682bee692bedae72687786e2b2e52eaeb9afc
 
 build:
-  number: 2
+  number: 3
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  noarch: python
   python:
     entry_points:
       - mailparser = mailparser.__main__:main
@@ -23,9 +24,9 @@ requirements:
   host:
     - pip
     - hatchling
-    - python
+    - python ${{ python_min }}.*
   run:
-    - python
+    - python >=${{ python_min }}
     - simplejson >=3.17.0
     - six >=1.14.0
 
@@ -34,9 +35,13 @@ tests:
       imports:
         - mailparser
       pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - pip
+        - python ${{ python_min }}.*
     script:
       - mailparser --help
 
