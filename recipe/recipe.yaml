@@ -25,8 +25,6 @@ requirements:
     - hatchling
     - python
   run:
-    - if: match(python, "<3.3")
-      then: ipaddress >=1.0.23
     - python
     - simplejson >=3.17.0
     - six >=1.14.0
