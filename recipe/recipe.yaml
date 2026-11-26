@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mail-parser
-  version: "4.11.0"
+  version: "4.12.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 8bb90074f07a881f362e2d2cff75181cf85696ce6aff4b27f2604040c13d13b5
+  sha256: bc951306315812c3366fc1e374e5619dd8f6c6d3bb0202b503a38ee6ff629209
 
 build:
   number: 0
